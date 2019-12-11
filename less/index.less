@@ -144,10 +144,13 @@ body {
     font-size: 1.8rem;
 }
 
-// beginning of my code
+@import url('https://fonts.googleapis.com/css?family=Lilita+One|Roboto&display=swap');
+
 .hidden {
     visibility: hidden;
 }
+
+@headerfont: 'Lilita One', cursive;
 
 nav {
     background-color: #deb881;
@@ -158,6 +161,11 @@ nav {
         text-decoration: none;
     }
 } //this closes the nav
+
+h1,
+h2 {
+    font-family: @headerfont;
+}
 
 header {
     display: flex;
@@ -184,6 +192,15 @@ header {
         width: 80%;
         justify-content: flex-end;
     }
+
+    @media (max-width: 500px) {
+        flex-direction: column;
+
+        div {
+            width: 100%;
+            align-items: center;
+        }
+    }
 } //this closes the header
 
 .info {
@@ -205,4 +222,11 @@ header {
     h3 {
         padding: 1%;
     }
+}
+
+footer {
+    background-color: #deb881;
+    text-align: center;
+    padding: 0.8%;
+    color: white;
 }
