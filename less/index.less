@@ -4,48 +4,129 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
@@ -53,7 +134,105 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
+body {
+    height: 100%;
+    font-size: 1.8rem;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lilita+One|Roboto&display=swap');
+
+.hidden {
+    visibility: hidden;
+}
+
+@headerfont: 'Lilita One', cursive;
+
+.italicized {
+    font-style: italic;
+}
+
+nav {
+    background-color: #deb881;
+    text-align: right;
+    padding: 0.8%;
+    a {
+        color: white;
+        text-decoration: none;
+    }
+} //this closes the nav
+
+h1,
+h2 {
+    font-family: @headerfont;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 3.6rem;
+    padding: 2%;
+    align-items: center;
+    background-color: #efe9cc;
+
+    p {
+        font-size: 2.4rem;
+        padding: 2%;
+        justify-content: space-between;
+        .italicized();
+    }
+
+    div {
+        flex-flow: row;
+        width: 35%;
+        padding: 2%;
+    }
+
+    img {
+        width: 80%;
+        justify-content: flex-end;
+    }
+
+    @media (max-width: 500px) {
+        flex-direction: column;
+
+        div {
+            width: 100%;
+            align-items: center;
+        }
+    }
+} //this closes the header
+
+.info {
+    padding: 2%;
+    background-color: #eadea6;
+    p {
+        padding: 1.3%;
+    }
+} //this closes info
+
+.history {
+    background-color: #f6cd90;
+    padding: 2%;
+
+    p {
+        padding: 1%;
+    }
+
+    h3 {
+        padding: 1%;
+        .italicized();
+    }
+}
+
+footer {
+    background-color: #deb881;
+    text-align: center;
+    padding: 0.8%;
+    color: white;
+}
