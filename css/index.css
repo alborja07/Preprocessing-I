@@ -155,6 +155,9 @@ body {
 .hidden {
   visibility: hidden;
 }
+.italicized {
+  font-style: italic;
+}
 nav {
   background-color: #deb881;
   text-align: right;
@@ -180,6 +183,7 @@ header p {
   font-size: 2.4rem;
   padding: 2%;
   justify-content: space-between;
+  font-style: italic;
 }
 header div {
   flex-flow: row;
@@ -215,6 +219,7 @@ header img {
 }
 .history h3 {
   padding: 1%;
+  font-style: italic;
 }
 footer {
   background-color: #deb881;
